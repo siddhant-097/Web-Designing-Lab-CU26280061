@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Keyboard Events</title>
+</head>
+<body>
+
+<h2>Keyboard Event Detector</h2>
+
+<input type="text" id="keyboard" placeholder="Press a key">
+
+<p id="result"></p>
+
+<script>
+    let keyboard = document.getElementById("keyboard");
+    let result = document.getElementById("result");
+
+    keyboard.addEventListener("keydown", function(event) {
+
+        result.innerHTML =
+            "Key Down<br>" +
+            "Key: " + event.key +
+            "<br>Code: " + event.code;
+    });
+
+    keyboard.addEventListener("keyup", function(event) {
+
+        result.innerHTML =
+            "Key Up<br>" +
+            "Key: " + event.key +
+            "<br>Code: " + event.code;
+    });
+</script>
+
+</body>
+</html>

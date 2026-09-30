@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Prime or Composite</title>
+    </head>
+
+    <body>
+
+        <h2>Check if a number is prime or composite</h2>
+
+        <input type="number" id="number" placeholder="Enter a number">
+        <button onClick=checkNumber()>Check</button>
+
+        <div id="result"></div>
+        <script>
+            function checkNumber(){
+                let num = Number(document.getElementById("number").value);
+                let result = document.getElementById("result")
+
+                if (num <= 1) {
+                    result.innerHTML = "The number is neither prime nor composite";
+                    return;
+                }
+
+                let isPrime = true;
+
+                for (let i = 2; i < num;  i++) {
+                    if (num % i === 0) {
+                        isPrime = false;
+                        break;
+                    }
+                }
+
+                if (isPrime) {
+                    result.innerHTML = num + " is a Prime Number.";
+                } else {
+                    result.innerHTML = num + " is a Composite Number."
+                }
+            }
+        </script>
+    </body>
+</html>

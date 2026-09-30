@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Student Object</title>
+</head>
+<body>
+
+<h2>Student Details</h2>
+
+<p id="result"></p>
+
+<script>
+    let student = {
+        name: "Rahul",
+        age: 21,
+        course: "MCA",
+
+        displayDetails: function() {
+            return "Name: " + this.name +
+                   "<br>Age: " + this.age +
+                   "<br>Course: " + this.course;
+        }
+    };
+
+    document.getElementById("result").innerHTML =
+        student.displayDetails();
+</script>
+
+</body>
+</html>

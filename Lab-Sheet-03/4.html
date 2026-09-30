@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2>Print Fibonacci upto nth term</h2>
+
+    <input type="number" id="term" placeholder="enter number of terms">
+
+    <button onclick="printFib()">Print Fibonacci series</button>
+
+    <p id="result"></p>
+
+    <script>
+        function printFib() {
+
+            let n = Number(document.getElementById("term").value)
+
+            let a = 0
+            let b = 1
+            let series = ""
+
+            for (let i = 1; i <= n; i++) {
+                series += a + " "
+
+                let next = a + b;
+                a = b;
+                b = next;
+            }
+
+             document.getElementById("result").innerHTML = series;
+        }
+    </script>
+</body>
+</html>

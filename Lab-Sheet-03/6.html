@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Array Methods</title>
+</head>
+<body>
+
+<h2>Array Manipulation</h2>
+
+<p id="result"></p>
+
+<script>
+    let numbers = [5, 2, 8, 1, 4];
+
+    // Add element
+    numbers.push(10);
+
+    // Remove last element
+    numbers.pop();
+
+    // Sort elements
+    numbers.sort(function(a, b) {
+        return a - b;
+    });
+
+    // Map - multiply every element by 2
+    let doubled = numbers.map(function(num) {
+        return num * 2;
+    });
+
+    // Filter - select numbers greater than 3
+    let filtered = numbers.filter(function(num) {
+        return num > 3;
+    });
+
+    document.getElementById("result").innerHTML =
+        "Original Array: " + numbers.join(", ") +
+        "<br>Doubled: " + doubled.join(", ") +
+        "<br>Greater than 3: " + filtered.join(", ");
+</script>
+
+</body>
+</html>
